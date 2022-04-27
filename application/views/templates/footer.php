@@ -89,7 +89,7 @@ $(document).ready(function() {
 
         // Load data for the table's content from an Ajax source
         "ajax": {
-            "url": "<?php echo site_url('master/dpt/panakukang_list') ?>",
+            "url": "<?php echo site_url('Master/Dpt/Panakukang_list') ?>",
             "type": "POST"
         },
 
@@ -163,7 +163,7 @@ $(document).ready(function() {
 
         // Load data for the table's content from an Ajax source
         "ajax": {
-            "url": "<?php echo site_url('master/dpt/tamalanrea_list') ?>",
+            "url": "<?php echo site_url('Master/Dpt/Tamalanrea_list') ?>",
             "type": "POST"
         },
 
