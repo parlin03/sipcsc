@@ -10,7 +10,7 @@ class Dpt extends CI_Controller
         is_logged_in();
     }
 
-    public function panakukang()
+    public function Panakukang()
     {
         $data['title'] = 'DPT Kec. Panakukang';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); //arraynya sebaris
@@ -23,7 +23,7 @@ class Dpt extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function panakukang_list()
+    public function Panakukang_list()
     {
         $this->load->model('Master/Panakukkang_Model', 'dpt');
         $list = $this->dpt->get_datatables();
