@@ -89,7 +89,7 @@ $(document).ready(function() {
 
         // Load data for the table's content from an Ajax source
         "ajax": {
-            "url": "<?php echo site_url('Master/Dpt/Panakukang_list') ?>",
+            "url": "<?php echo site_url('Dpt/Panakukang_list') ?>",
             "type": "POST"
         },
 
@@ -114,7 +114,7 @@ $(document).ready(function() {
 
         // Load data for the table's content from an Ajax source
         "ajax": {
-            "url": "<?php echo site_url('master/dpt/manggala_list') ?>",
+            "url": "<?php echo site_url('dpt/manggala_list') ?>",
             "type": "POST"
         },
 
@@ -139,7 +139,7 @@ $(document).ready(function() {
 
         // Load data for the table's content from an Ajax source
         "ajax": {
-            "url": "<?php echo site_url('master/dpt/biringkanaya_list') ?>",
+            "url": "<?php echo site_url('dpt/biringkanaya_list') ?>",
             "type": "POST"
         },
 
@@ -163,7 +163,7 @@ $(document).ready(function() {
 
         // Load data for the table's content from an Ajax source
         "ajax": {
-            "url": "<?php echo site_url('Master/Dpt/Tamalanrea_list') ?>",
+            "url": "<?php echo site_url('Dpt/Tamalanrea_list') ?>",
             "type": "POST"
         },
 
