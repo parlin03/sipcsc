@@ -153,7 +153,7 @@ class Dpt extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function tamalanrea_list()
+    public function Tamalanrea_list()
     {
         $this->load->model('Tamalanrea_Model', 'dpt');
         $list = $this->dpt->get_datatables();
