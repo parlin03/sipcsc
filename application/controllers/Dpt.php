@@ -8,6 +8,7 @@ class Dpt extends CI_Controller
     {
         parent::__construct();
         is_logged_in();
+        $this->load->model('Panakukkang_Model');
     }
 
     public function Panakukang()
@@ -25,8 +26,8 @@ class Dpt extends CI_Controller
 
     public function Panakukang_list()
     {
-        $this->load->model('Panakukkang_Model', 'dpt');
-        $list = $this->dpt->get_datatables();
+
+        $list = $this->Panakukkang_Model->get_datatables();
         $data = array();
         $no = $_POST['start'];
         foreach ($list as $dpt) {
@@ -45,8 +46,8 @@ class Dpt extends CI_Controller
 
         $output = array(
             "draw" => $_POST['draw'],
-            "recordsTotal" => $this->dpt->count_all(),
-            "recordsFiltered" => $this->dpt->count_filtered(),
+            "recordsTotal" => $this->Panakukkang_Model->count_all(),
+            "recordsFiltered" => $this->Panakukkang_Model->count_filtered(),
             "data" => $data,
         );
         //output to json format
