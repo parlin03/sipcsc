@@ -112,7 +112,7 @@ class Dpt extends CI_Controller
 
     public function biringkanaya_list()
     {
-        $this->load->model('biringkanaya_Model', 'dpt');
+        $this->load->model('Biringkanaya_Model', 'dpt');
         $list = $this->dpt->get_datatables();
         $data = array();
         $no = $_POST['start'];
@@ -149,7 +149,7 @@ class Dpt extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
-        $this->load->view('dpt/Tamalanrea', $data);
+        $this->load->view('dpt/tamalanrea', $data);
         $this->load->view('templates/footer');
     }
 
