@@ -8,7 +8,7 @@ class Panakukkang_Model extends CI_Model
     var $column_order = array(null, 'noktp', 'nama', 'alamat', 'rw', 'rt', 'namakel'); //set column field database for datatable orderable
     var $column_search = array('noktp', 'nama', 'alamat', 'rw', 'rt', 'namakel'); //set column field database for datatable searchable 
     var $order = array('noktp' => 'asc'); // default order 
-
+    var $value = '';
 
     public function __construct()
     {
