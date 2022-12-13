@@ -14,7 +14,7 @@ class Auth extends CI_Controller
             redirect('user');
         }
 
-        $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email');
+        // $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email');
         $this->form_validation->set_rules('password', 'Password', 'required|trim');
 
         if ($this->form_validation->run() == false) {
@@ -33,7 +33,8 @@ class Auth extends CI_Controller
         $password = $this->input->post('password');
 
         $user = $this->db->get_where('user', ['email' => $email])->row_array();
-
+        // var_dump($user);
+        // die;
         // jika user ada
         if ($user) {
             //jika user aktif

@@ -5,18 +5,21 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow ">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
 
+                    <li class="nav-item  d-sm-block text-center">
+                        <a href="<?= base_url('home'); ?>" class="nav-link text-center">Acountable Data Access Management</a>
+                    </li>
+
 
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-
 
 
 
@@ -32,9 +35,17 @@
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="<?= base_url('user'); ?>">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     My Profile
+                                </a>
+                                <a class="dropdown-item" href="<?= base_url('user/edit'); ?>">
+                                    <i class="fas fa-fw fa-user-edit fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Edit Profile
+                                </a>
+                                <a class="dropdown-item" href="<?= base_url('user/changepassword'); ?>">
+                                    <i class="fas fa-fw fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Change Password
                                 </a>
 
                                 <div class="dropdown-divider"></div>

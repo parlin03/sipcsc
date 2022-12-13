@@ -5,48 +5,71 @@
     <h1 class="h3 mb-4 text-gray-800"><?= $title; ?> </h1>
 
 
+    <!-- Main content -->
+    <section class="content">
+        <div class="container">
+            <!-- Content Row -->
+            <div class="row">
+                <!-- Area Chart -->
+                <div class="col-xl-12 col-lg-12">
+                    <div class="card shadow mb-2">
+                        <!-- Card Header - Dropdown -->
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <!-- notif error -->
+                            <?= form_error('menu', '<div class="alert alert-danger" role ="alert">', '</div>'); ?>
 
-    <div class="row">
-        <div class="col-lg-6">
-            <!-- notif error -->
-            <?= form_error('menu', '<div class="alert alert-danger" role ="alert">', '</div>'); ?>
-
-            <!-- notif sukses -->
-            <?= $this->session->flashdata('message'); ?>
+                            <!-- notif sukses -->
+                            <?= $this->session->flashdata('message'); ?>
 
 
-            <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newRoleModal"> Add New Role</a>
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Role</th>
-                        <th scope="col">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php $i = 1; ?>
+                            <a href="" class="btn btn-primary" data-toggle="modal" data-target="#newRoleModal"> Add New Role</a>
 
-                    <?php foreach ($role as $r) : ?>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <div class="card">
+                                <div class="table table-responsive">
+                                    <table class="table table-bordered table-striped table-hover ">
+                                        <thead class="text-center text-dark">
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Role</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $i = 1; ?>
 
-                        <tr>
-                            <th scope="row"><?= $i; ?>
-                            </th>
-                            <td><?= $r['role']; ?></td>
-                            <td>
-                                <a href="<?= base_url('menu/roleaccess/') . $r['id']; ?>" class="badge badge-warning">access</a>
-                                <a href="" class="badge badge-success">edit</a>
-                                <a href="" class="badge badge-danger">delete</a>
-                            </td>
-                        </tr>
-                        <?php $i++; ?>
+                                            <?php foreach ($role as $r) : ?>
 
-                    <?php endforeach; ?>
+                                                <tr>
+                                                    <th class="text-center" scope="row"><?= $i; ?>
+                                                    </th>
+                                                    <td><?= $r['role']; ?></td>
+                                                    <td class="text-center">
+                                                        <a href="<?= base_url('menu/roleaccess/') . $r['id']; ?>" class="badge badge-warning">access</a>
+                                                        <a href="" class="badge badge-success">edit</a>
+                                                        <a href="" class="badge badge-danger">delete</a>
+                                                    </td>
+                                                </tr>
+                                                <?php $i++; ?>
 
-                </tbody>
-            </table>
-        </div>
-    </div>
+                                            <?php endforeach; ?>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Content Row -->
+
+            </div>
+    </section>
+    <!-- /.content -->
+
+
 
 </div>
 <!-- /.container-fluid -->
